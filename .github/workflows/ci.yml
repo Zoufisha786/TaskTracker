@@ -31,6 +31,13 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli@18.2.0
 
-      # Step 5: Build the Application
+      # Step 5: Build the Angular App
       - name: Build Angular App
-        run: ng build --configuration=production
+        run: ng build --configuration=production --output-path=docs
+
+      # Step 6: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
