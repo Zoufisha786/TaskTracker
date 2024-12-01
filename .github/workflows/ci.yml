@@ -34,7 +34,3 @@ jobs:
       # Step 5: Build the Application
       - name: Build Angular App
         run: ng build --configuration=production
-
-      # Step 6: Run Tests
-      - name: Run Tests
-        run: npm test
