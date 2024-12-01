@@ -1,0 +1,24 @@
+<!-- src/app/view/view.component.html -->
+<div class="container mt-4">
+  <h1 style="color: green;">View Tasks</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>TaskId</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Due Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tableData">
+        <td>{{ task.TaskId }}</td>
+        <td>{{ task.Title }}</td>
+        <td>{{ task.Description }}</td>
+        <td>{{ task.DueDate }}</td>
+        <td>{{ task.Checked ? 'Accepted' : 'Not-Accepted' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
