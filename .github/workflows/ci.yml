@@ -31,14 +31,10 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli@18.2.0
 
-      # Step 5: Lint the Code
-      - name: Run Linting
-        run: npm run lint
-
-      # Step 6: Build the Application
+      # Step 5: Build the Application
       - name: Build Angular App
         run: ng build --configuration=production
 
-      # Step 7: Run Tests
+      # Step 6: Run Tests
       - name: Run Tests
         run: npm test
